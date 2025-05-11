@@ -9,6 +9,6 @@ end)
 
     
     
-    Section:NewButton("ButtonText", "ButtonInfo", function()
-    print("Clicked")
+    Section:NewButton("3rd person", "3rd person", function()
+        game.Players.LocalPlayer.CameraMinZoomDistance, game.Players.LocalPlayer.CameraMaxZoomDistance, workspace.CurrentCamera.CameraType, workspace.CurrentCamera.CameraSubject = 0, 100, Enum.CameraType.Custom, game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 end)
