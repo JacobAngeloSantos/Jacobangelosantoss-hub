@@ -10,5 +10,18 @@ end)
     
     
     Section:NewButton("3rd person", "3rd person", function()
-        game.Players.LocalPlayer.CameraMinZoomDistance, game.Players.LocalPlayer.CameraMaxZoomDistance, workspace.CurrentCamera.CameraType, workspace.CurrentCamera.CameraSubject = 0, 100, Enum.CameraType.Custom, game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+        game.Players.LocalPlayer.CameraMinZoomDistance, game.Players.LocalPlayer.CameraMaxZoomDistance, workspace.CurrentCamera.CameraType, workspace.CurrentCamera.CameraSubject = 1, 16, Enum.CameraType.Custom, game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
 end)
+
+
+
+
+    Section:NewButton("Wallhop and ladder gui", "Wallhop", function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Wallhop-v3-38281"))()
+    end)
+
+
+
+    Section:NewButton("Invis Car gui", "invis car", function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Fe-Invisible-Car-GUi_382"))()
+    end)
