@@ -17,7 +17,7 @@ end)
 
 
     Section:NewButton("Wallhop and ladder gui", "Wallhop", function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Wallhop-v3-38281"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
     end)
 
 
