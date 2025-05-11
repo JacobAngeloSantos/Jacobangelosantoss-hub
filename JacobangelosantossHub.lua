@@ -40,6 +40,7 @@ end)
 
 
 
+local Tab = Window:NewTab("Client Replication")
 local Section = Tab:NewSection("Client Replication")
 Section:NewButton("Grab knife v4", "Grab knife v4", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua"))()
