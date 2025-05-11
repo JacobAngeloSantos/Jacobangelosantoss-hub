@@ -25,3 +25,9 @@ end)
     Section:NewButton("Invis Car gui", "invis car", function()
         loadstring(game:HttpGet("https://rawscripts.net/raw/Fe-Invisible-Car-GUi_382"))()
     end)
+
+
+
+Section:NewButton("coolkid gui", "coolkid gui", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-c00lkid-UI-37757"))()
+end)
