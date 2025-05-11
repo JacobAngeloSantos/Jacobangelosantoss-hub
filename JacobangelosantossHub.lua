@@ -31,3 +31,9 @@ end)
 Section:NewButton("coolkid gui", "coolkid gui", function()
     loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-c00lkid-UI-37757"))()
 end)
+
+
+
+Section:NewButton("tptool", "tp tool", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Teleport-Tools-34066"))()
+end)
