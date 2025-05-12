@@ -45,3 +45,11 @@ local Section = Tab:NewSection("Client Replication")
 Section:NewButton("Grab knife v4", "Grab knife v4", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua"))()
 end)
+
+
+
+local Tab = Window:NewTab("Backdoored games")
+local Section = Tab:NewSection("Backdoored games")
+Section:NewButton("Backdoor", "Backdoor", function()
+    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-Hub-Legacy-Backdoor-39254"))()
+end)
