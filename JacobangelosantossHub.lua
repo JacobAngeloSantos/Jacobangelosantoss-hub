@@ -40,6 +40,18 @@ end)
 
 
 
+Section:NewSlider("Walkspeed", "Change your walkspeed", 1000, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+
+Section:NewSlider("Jump power", "Change your jump power", 1000, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
+end)
+
+
+
 local Tab = Window:NewTab("Client Replication")
 local Section = Tab:NewSection("Client Replication")
 Section:NewButton("Grab knife v4", "Grab knife v4", function()
