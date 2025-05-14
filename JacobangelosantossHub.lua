@@ -51,6 +51,11 @@ Section:NewSlider("Jump power", "Change your jump power", 1000, 0, function(s) -
 end)
 
 
+Section:NewButton("record", "record", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20record%20V3%20script'))()
+end)
+
+
 
 local Tab = Window:NewTab("Client Replication")
 local Section = Tab:NewSection("Client Replication")
