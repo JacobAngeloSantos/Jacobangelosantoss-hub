@@ -139,7 +139,7 @@ local Button = Tab:CreateButton({
 
 
 
-local Tab = Window:CreateTab("Client Replication", "rewind")
+local Tab = Window:CreateTab("Client Replication", "computer")
 
 
 
@@ -152,7 +152,7 @@ local Button = Tab:CreateButton({
 
 
 
-local Tab = Window:CreateTab("Backdoored games", "rewind")
+local Tab = Window:CreateTab("Backdoored games", "shield-alert")
 local Button = Tab:CreateButton({
    Name = "Backdoor",
    Callback = function()
