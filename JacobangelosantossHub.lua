@@ -5,13 +5,6 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "SUB TO @JACOBANGELOSANTOSS!!!!",
    LoadingSubtitle = "by Jacobangelosantoss",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
-   
-   Rayfield:Notify({
-   Title = "Sub to @Jacobangelosantoss on youtube",
-   Content = "And follow me on roblox @Jacobangelosantoss spawnpoint",
-   Duration = 6.5,
-   Image = 4483362458,
-})
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
