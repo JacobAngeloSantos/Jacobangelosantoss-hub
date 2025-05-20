@@ -139,6 +139,15 @@ local Button = Tab:CreateButton({
 
 
 
+local Button = Tab:CreateButton({
+   Name = Vfly script
+   Callback = function()
+      loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Vfly-script-by-me-11871"))()
+   end,
+})
+
+
+
 local Tab = Window:CreateTab("Client Replication", "computer")
 
 
