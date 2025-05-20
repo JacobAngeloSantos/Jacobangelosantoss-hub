@@ -2,9 +2,16 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Jacobangelosantoss hub",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Rayfield Interface Suite",
+   LoadingTitle = "SUB TO @JACOBANGELOSANTOSS!!!!",
    LoadingSubtitle = "by Jacobangelosantoss",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   
+   Rayfield:Notify({
+   Title = "Sub to @Jacobangelosantoss on youtube",
+   Content = "And follow me on roblox @Jacobangelosantoss spawnpoint",
+   Duration = 6.5,
+   Image = 4483362458,
+})
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -93,7 +100,7 @@ local Button = Tab:CreateButton({
 
 local Slider = Tab:CreateSlider({
    Name = "Walkspeed",
-   Range = {0, 100},
+   Range = {0, 2000},
    Increment = 10,
    Suffix = "Walkspeed",
    CurrentValue = 16,
@@ -108,13 +115,13 @@ local Slider = Tab:CreateSlider({
 
 local Slider = Tab:CreateSlider({
    Name = "Jump power",
-   Range = {0, 100},
+   Range = {0, 2000},
    Increment = 10,
    Suffix = "Jump Power",
-   CurrentValue = 10,
+   CurrentValue = 50,
    Flag = "SliderJump", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
-   -- The function that takes place when the slider changes
+   game.Players.LocalPlayer.Character.Humanoid.JumpHeight = Value
    -- The variable (Value) is a number which correlates to the value the slider is currently at
    end,
 })
