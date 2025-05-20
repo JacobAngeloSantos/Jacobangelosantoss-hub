@@ -1,72 +1,161 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Jacobangelosantoss hub",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Rayfield Interface Suite",
+   LoadingSubtitle = "by Jacobangelosantoss",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
-local Window = Library.CreateLib("Jacobangelosantoss Hub", "DarkTheme")
-local Tab = Window:NewTab("Universal")
-local Section = Tab:NewSection("Universal")
-Section:NewButton("Fly gui", "Fly gui", function()
-    loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
-end)
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
-    
-    
-    Section:NewButton("3rd person", "3rd person", function()
-        game.Players.LocalPlayer.CameraMinZoomDistance, game.Players.LocalPlayer.CameraMaxZoomDistance, workspace.CurrentCamera.CameraType, workspace.CurrentCamera.CameraSubject = 1, 16, Enum.CameraType.Custom, game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
-end)
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Jacobangelosantoss hub"
+   },
 
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
 
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "If this pop up use key Hello because this hub is keyless ", -- Use this to tell the user how to get a key
+      FileName = "KeyJacobangelosantossHub", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
 
-
-    Section:NewButton("Wallhop and ladder gui", "Wallhop", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
-    end)
-
-
-
-    Section:NewButton("Invis Car gui", "invis car", function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Fe-Invisible-Car-GUi_382"))()
-    end)
-
-
-
-Section:NewButton("coolkid gui", "coolkid gui", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-c00lkid-UI-37757"))()
-end)
-
-
-
-Section:NewButton("tptool", "tp tool", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Teleport-Tools-34066"))()
-end)
+local Tab = Window:CreateTab("Universal", 4483362458) -- Title, Image
 
 
 
-Section:NewSlider("Walkspeed", "Change your walkspeed", 1000, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
+local Button = Tab:CreateButton({
+   Name = "Fly gui",
+   Callback = function()
+   loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+   end,
+})
 
 
 
-Section:NewSlider("Jump power", "Change your jump power", 1000, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
-end)
-
-
-Section:NewButton("record", "record", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20record%20V3%20script'))()
-end)
-
-
-
-local Tab = Window:NewTab("Client Replication")
-local Section = Tab:NewSection("Client Replication")
-Section:NewButton("Grab knife v4", "Grab knife v4", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua"))()
-end)
+local Button = Tab:CreateButton({
+   Name = "3rd person",
+   Callback = function()
+   game.Players.LocalPlayer.CameraMinZoomDistance, game.Players.LocalPlayer.CameraMaxZoomDistance, workspace.CurrentCamera.CameraType, workspace.CurrentCamera.CameraSubject = 1, 16, Enum.CameraType.Custom, game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:WaitForChild("Humanoid")
+   end,
+})
 
 
 
-local Tab = Window:NewTab("Backdoored games")
-local Section = Tab:NewSection("Backdoored games")
-Section:NewButton("Backdoor", "Backdoor", function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-Hub-Legacy-Backdoor-39254"))()
-end)
+local Button = Tab:CreateButton({
+   Name = "Wallhop and ladder gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20WallHop%20V4%20script"))()
+   end,
+})
+
+
+
+local Button = Tab:CreateButton({
+   Name = "Invis Car gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Fe-Invisible-Car-GUi_382"))()
+   end,
+})
+
+
+
+local Button = Tab:CreateButton({
+   Name = "coolkid gui",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-c00lkid-UI-37757"))()
+   end,
+})
+
+
+
+local Button = Tab:CreateButton({
+   Name = "tptool",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Teleport-Tools-34066"))()
+   end,
+})
+
+
+
+local Slider = Tab:CreateSlider({
+   Name = "Walkspeed",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Walkspeed",
+   CurrentValue = 16,
+   Flag = "SliderWalk", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+
+
+
+local Slider = Tab:CreateSlider({
+   Name = "Jump power",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Jump Power",
+   CurrentValue = 10,
+   Flag = "SliderJump", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+
+
+
+local Button = Tab:CreateButton({
+   Name = "record",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/ScpGuest666/Random-Roblox-script/refs/heads/main/Roblox%20record%20V3%20script'))()
+   end,
+})
+
+
+
+local Button = Tab:CreateButton({
+   Name = "Nameless Admin",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/ltseverydayyou/Nameless-Admin/main/Source"))();
+   end,
+})
+
+
+
+local Tab = Window:CreateTab("Client Replication", "rewind")
+
+
+
+local Button = Tab:CreateButton({
+   Name = "Grab knife v4",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua"))()
+   end,
+})
+
+
+
+local Tab = Window:CreateTab("Backdoored games", "rewind")
+local Button = Tab:CreateButton({
+   Name = "Backdoor",
+   Callback = function()
+   loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-Hub-Legacy-Backdoor-39254"))()
+   end,
+})
