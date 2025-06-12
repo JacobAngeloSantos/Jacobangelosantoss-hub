@@ -148,6 +148,15 @@ local Button = Tab:CreateButton({
 
 
 
+
+local Button = Tab:CreateButton({
+   Name = "Sword auto clicker",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/JacobAngeloSantos/3rd-person-roblox/refs/heads/main/autoclickersword.lua"))()
+   end,
+})
+
+
 local Tab = Window:CreateTab("Client Replication", "computer")
 
 
