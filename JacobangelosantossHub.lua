@@ -157,6 +157,15 @@ local Button = Tab:CreateButton({
 })
 
 
+
+local Button = Tab:CreateButton({
+   Name = "Freecam",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/JacobAngeloSantos/3rd-person-roblox/refs/heads/main/freecamriblox.lua"))()
+   end,
+})
+
+
 local Tab = Window:CreateTab("Client Replication", "computer")
 
 
