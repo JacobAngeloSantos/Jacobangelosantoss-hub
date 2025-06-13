@@ -186,3 +186,29 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Lalol-Hub-Legacy-Backdoor-39254"))()
    end,
 })
+
+
+local Tab = Window:CreateTab("Grow a garden", 4483362458) -- Title, Image
+
+
+
+local Button = Tab:CreateButton({
+   Name = "inf money",
+   Callback = function()
+   local player = game:GetService("Players").LocalPlayer
+
+-- Wait for leaderstats and Sheckles to load
+local leaderstats = player:WaitForChild("leaderstats")
+local sheckles = leaderstats:WaitForChild("Sheckles")
+
+-- Set Sheckles to infinity
+sheckles.Value = math.huge
+
+-- Wait for the GUI and TextLabel
+local shecklesUI = player:WaitForChild("PlayerGui"):WaitForChild("Sheckles_UI")
+local textLabel = shecklesUI:WaitForChild("TextLabel")
+
+-- Set the text to 'inf'
+textLabel.Text = "inf"
+   end,
+})
