@@ -18,24 +18,13 @@ if not buildPart then
 	buildPart.Parent = ReplicatedStorage
 end
 
--- 🧰 Build Tool
+-- 🧰 Build Tool setup
 local equipped = false
+
 local tool = Instance.new("Tool")
 tool.Name = "Build Tool"
 tool.RequiresHandle = false
 tool.Parent = player:WaitForChild("Backpack")
-
-tool.Equipped:Connect(function()
-	equipped = true
-	gui.Enabled = true
-end)
-
-tool.Unequipped:Connect(function()
-	equipped = false
-	gui.Enabled = false
-	clearSelection()
-	waitingToMove = false
-end)
 
 -- Settings
 local gridSize = 4
@@ -52,7 +41,7 @@ local selected
 local selectionBox
 local waitingToMove = false
 
--- UI
+-- UI setup (GUI hidden at first)
 local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
 gui.Name = "BuildGui"
 gui.Enabled = false
@@ -76,6 +65,19 @@ local colorBtn = makeBtn("Color", "Color: Blue", 50)
 local moveBtn = makeBtn("Move", "Move", 90)
 local resizeBtn = makeBtn("Resize", "Resize +", 130)
 local deleteBtn = makeBtn("Delete", "Delete", 170)
+
+-- Tool equip / unequip logic
+tool.Equipped:Connect(function()
+	equipped = true
+	gui.Enabled = true
+end)
+
+tool.Unequipped:Connect(function()
+	equipped = false
+	gui.Enabled = false
+	clearSelection()
+	waitingToMove = false
+end)
 
 -- Helpers
 local function snap(pos)
